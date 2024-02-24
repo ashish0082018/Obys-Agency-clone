@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Plain Light";
+    box-sizing: border-box;
+    color: white;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#crsr{
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
+  /* background-color: white; */
+  border: 1px solid rgb(235, 229, 229);
+  position: fixed;
+  z-index: 999;  
+  mix-blend-mode: difference;         /*Mix blend use to see the background*/
+  transform: translate(-50%,-50%);
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    position:fixed ;
+    z-index: 999;
+    background-color: #0B0B0B;
+    padding: 25vh 10vw;
+}
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+}
+#line1-part1 h5, #line1-part1 h6{
+    font-size:2.3vw ;
+    font-weight: 100;
+    font-family: 'silk serif';
+
+}
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.line h2{
+    
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    /* animation-name: anime;    */    /*instead of giving animation name here, give the name in timeline function in JS */
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes anime{
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;      /* make border to text */
+        color: white;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;      /* make border to text */
+        color: white;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;      /* make border to text */
+        color: transparent;
+       
+        font-weight: 500;
+        opacity: 1;
+
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;      /* make border to text */
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+
+
+    }
+}
+
+
+#main{
+    position: relative;
+    background-color: #151515;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #252424;
+
+}
+
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw ;
+
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-part2 h4{
+    font-size: 1vw;
+    font-weight: 500;
+    
+}
+
+.hero{
+    
+    margin-left: 27% ;
+    width: 72%;
+    height: fit-content;   /*Similar reason as below reason*/
+    overflow: hidden;      /* To avoid the overflow of text from the div while animation of gsap apply*/
+    display: flex;
+    align-items: center;
+}
+.hero:nth-child(2){
+    margin-top: 18vh;
+}
+.hero h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    font-weight: 600;
+}
+
+.hero h2{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    font-weight: 600;
+    border-bottom: 0.5vw solid white;
+    padding-bottom: 0.8vw;
+    /* transition: ; */
+}
+.hero h2:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: 0.5vw solid #121111;
+}
+
